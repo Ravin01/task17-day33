@@ -29,5 +29,5 @@ db.info.find({product_material:{$regex: "Soft"}});
 // 9.Find products which contain product color indigo  and product price 492.00
 db.info.find({product_price: 492, product_color: "indigo"});
 
-// 10.Delete the products which product price value are same
-db.info.deleteMany({"product_price": 47}); // 47 is the same product price
+// 10.Delete the products which product price value = 47
+db.info.deleteOne({"product_price": 47});
